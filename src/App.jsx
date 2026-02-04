@@ -12,7 +12,7 @@ function App() {
   };
 
   const updateTodo = (id, todo) => {
-    setTodos((prev) => prev.map((i) => (i.id === id ? todo : i)));
+    setTodos((prev) => prev.map((i) => (i.id === id ? { ...i, todo: todo } : i)));
   };
 
   const deleteTodo = (id) => {
